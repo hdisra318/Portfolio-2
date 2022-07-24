@@ -22,6 +22,24 @@
   --box-shadow-1: 0 3px 15px rgba(0 0 0 .3);
 }
 
+/*----- Light-mode -----*/
+.light-mode {
+  /* Variables de los colores */
+  --color-primario: #E8F6EF;
+  --color-secundario: #4CACBC;
+  --blanco: #00416D;
+  --negro: #ffe194;
+  --gris-0: #f8f8f8;
+  --gris-1: #6c7983;
+  --gris-2: #0f2237;
+  --gris-3: #6c7983;
+  --gris-4: #ffe194;
+  --gris-5: #A0D995;
+  --gris-6: #ffe194;
+  --border-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0 0 0 .3);
+}
+
 body {
   background-color: var(--color-primario);
   font-family: "Poppins", sans-serif;
@@ -148,6 +166,31 @@ section {
 }
 .controlls i {
   font-size: 1.2rem;
+  color: var(--gris-2);
+  pointer-events: none;
+}
+
+/* Theme button */
+.theme-button {
+  top: 5%;
+  right: 3%;
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--gris-4);
+  cursor: pointer;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.theme-button:active {
+  transform: translateY(-5px);
+}
+.theme-button i {
+  font-size: 1.4rem;
   color: var(--gris-2);
   pointer-events: none;
 }
@@ -558,6 +601,62 @@ section {
 .contact-content-container .left-contact {
   flex: 2;
 }
+.contact-content-container .left-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-content-container .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+.contact-content-container .left-contact .contact-info .contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-content-container .left-contact .contact-info .contact-item p {
+  margin: 0.3rem 0 !important;
+  padding: 0 !important;
+}
+.contact-content-container .left-contact .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+.contact-content-container .left-contact .contact-info .contact-item .icon i {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.contact-content-container .contact-icons {
+  display: flex;
+  margin-top: 2rem;
+}
+.contact-content-container .contact-icons a {
+  display: flex;
+  align-items: center;
+  color: var(--blanco);
+  background-color: var(--gris-5);
+  cursor: pointer;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.4rem;
+  transition: all 0.4s ease-in-out;
+}
+.contact-content-container .contact-icons a:hover {
+  background-color: var(--color-secundario);
+}
+.contact-content-container .contact-icons a:hover i {
+  color: var(--color-primario);
+}
+.contact-content-container .contact-icons a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
 .contact-content-container .right-contact {
   flex: 3;
   margin-left: 3rem;
@@ -583,6 +682,10 @@ section {
 }
 .contact-content-container .right-contact .input-control-2 :last-child {
   margin-left: 1.5rem;
+}
+.contact-content-container .right-contact .submit-button {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /*----- Componentes Independientes -----*/

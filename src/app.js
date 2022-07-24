@@ -41,6 +41,16 @@ function pageTransitions() {
             element.classList.add('active');
         }
     });
+
+    //Theme button
+    const thmeButton = document.querySelector('.theme-button');
+    thmeButton.addEventListener('click', () => {
+        
+        //When the button is clicked, a class 'light-mode' is added to the body and it removes when is clicked again
+        const element = document.body;
+        element.classList.toggle('light-mode');
+
+    });
 }
 
 pageTransitions();
